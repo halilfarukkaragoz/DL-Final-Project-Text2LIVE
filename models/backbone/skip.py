@@ -59,6 +59,7 @@ def skip(
     cur_depth = None
 
     model = nn.Sequential()
+    
     # model.add(transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5]))
     model_tmp = model
 

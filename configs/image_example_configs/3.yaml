@@ -1,0 +1,8 @@
+image_path: "./data/images/3.jpeg" # path to the input image
+
+screen_text: " " # texts, describing the edit layer
+comp_text: " " # texts, describing the full edited image
+src_text: "Mountain" # texts, describing the input image
+
+bootstrap_text: "Mountain" # text, describing the region of interest in the input image
+bootstrap_epoch: 100 # number of epochs for bootstrapping (it is annealed during training)

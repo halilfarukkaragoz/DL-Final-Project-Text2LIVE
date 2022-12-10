@@ -8,6 +8,7 @@ import numpy as np
 import torch
 import yaml
 from tqdm import tqdm
+import gc
 
 from datasets.image_dataset import SingleImageDataset
 from models.clip_extractor import ClipExtractor
@@ -88,12 +89,14 @@ def save_locally(results_folder, log_data):
             imageio.imwrite(f"{path}/{key}.png", log_data[key])
 
 
+
+
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument(
         "--config",
         default="./configs/image_config.yaml",
-        help="Config path",
+        help="Config path for model",
     )
     parser.add_argument(
         "--example_config",
@@ -111,21 +114,33 @@ if __name__ == "__main__":
     config.update(example_config)
 
     run_name = f"-{config['image_path'].split('/')[-1]}"
-    if config["use_wandb"]:
-        import wandb
+    
+    #comp_texts = ["golden","beatifull","Logical"] # 1.yaml
+    #comp_texts = [ "melted cheese", "spinach moss" , "oreo", "white", "golden", "burned", "heart pattern", "Logical"] # it is for keywords
+    comp_texts = ["snow","volcano",	"sahara","ocean" ,"alps", "Mars crater", "Moon" , "Cat sand", "Robotic"] # 3rd keywords
+    for text in comp_texts:
+        gc.collect()
+        torch.cuda.empty_cache()
+        config["comp_text"] = text
+        config["screen_text"] = text
+        
+        if config["use_wandb"]:
+            import wandb
 
-        wandb.init(project=config["wandb_project"], entity=config["wandb_entity"], config=config, name=run_name)
-        wandb.run.name = str(wandb.run.id) + wandb.run.name
-        config = dict(wandb.config)
-    else:
-        now = datetime.datetime.now()
-        run_name = f"{now.strftime('%Y-%m-%d_%H-%M-%S')}{run_name}"
-        path = Path(f"{config['results_folder']}/{run_name}")
-        path.mkdir(parents=True, exist_ok=True)
-        with open(path / "config.yaml", "w") as f:
-            yaml.dump(config, f)
-        config["results_folder"] = str(path)
-
-    train_model(config)
-    if config["use_wandb"]:
-        wandb.finish()
+            wandb.init(project=config["wandb_project"], entity=config["wandb_entity"], config=config, name=run_name)
+            wandb.run.name = str(wandb.run.id) + wandb.run.name
+            config = dict(wandb.config)
+        else:
+            now = datetime.datetime.now()
+            #run_name = f"{run_name}/{text}"
+            config['results_folder'] = "results"
+            #path = Path(f"{config['results_folder']}/{run_name}")
+            path = Path(f'results/{run_name}_last/{text}')
+            path.mkdir(parents=True, exist_ok=True)
+            with open(path / "config.yaml", "w") as f:
+                yaml.dump(config, f)
+            config["results_folder"] = str(path)
+        #print(config)
+        train_model(config)
+        if config["use_wandb"]:
+            wandb.finish()
