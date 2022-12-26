@@ -117,12 +117,34 @@ if __name__ == "__main__":
     
     #comp_texts = ["golden","beatifull","Logical"] # 1.yaml
     #comp_texts = [ "melted cheese", "spinach moss" , "oreo", "white", "golden", "burned", "heart pattern", "Logical"] # it is for keywords
-    comp_texts = ["snow","volcano",	"sahara","ocean" ,"alps", "Mars crater", "Moon" , "Cat sand", "Robotic"] # 3rd keywords
-    for text in comp_texts:
+    #comp_texts = ["snow","volcano",	"sahara","ocean" ,"alps", "Mars", "Moon" , "Cat sand", "Robotic", "Sun" ,"Saturn's ring"] # 3rd keywords
+    #comp_texts = ["golden ball"	,"wooden ball"	,"stained glass ball",	"crochet ball", "Basketball ball", "Tenis ball", "Sci-fi ball", "Robot", "Cat" ,"Dog"] # 4 th exp keywords
+    #comp_texts = ["sad face", "happy face", "smile" , "shocked", "sad", "smiley mouth", "smile mouth", "happy mouth"]
+    #comp_texts = [ "parrot", "Hummingbird", "Mockingbird"]
+    #comp_texts = ["golden dolphin",	"wooden dolphin",	"orca",	"crochet dolphin", "Shark", "Whale",]
+
+    #comp_texts = ["fire out of bear's mouth"]
+    
+
+    '''
+    4 le ilgili bir deney daha yapılabilir mutlu çocuk üzgün çocuk gibi ??
+    '''
+
+    #image_path=["./data/images/Cat03.jpg","./data/images/cat04.webp","./data/images/sphynx.jpg"]
+
+
+    image_paths = ["./data/images/cat1.jpeg","./data/images/cat2.jpeg"]
+
+    #comp_texts=["blue hair","pink hair","black hair"]
+    
+    #for text in comp_texts:
+    for path in image_paths:
+
         gc.collect()
         torch.cuda.empty_cache()
-        config["comp_text"] = text
-        config["screen_text"] = text
+        # config["comp_text"] = text 
+        # config["screen_text"] = text
+        config["image_path"] = path
         
         if config["use_wandb"]:
             import wandb
@@ -135,7 +157,7 @@ if __name__ == "__main__":
             #run_name = f"{run_name}/{text}"
             config['results_folder'] = "results"
             #path = Path(f"{config['results_folder']}/{run_name}")
-            path = Path(f'results/{run_name}_last/{text}')
+            path = Path(f'results/{run_name}_last/{path}')
             path.mkdir(parents=True, exist_ok=True)
             with open(path / "config.yaml", "w") as f:
                 yaml.dump(config, f)

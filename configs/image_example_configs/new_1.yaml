@@ -1,0 +1,8 @@
+image_path: "./data/images/new_1.jpeg" # path to the input image
+
+screen_text: "fire" # texts, describing the edit layer
+comp_text: "fire out of bear's mouth" # texts, describing the full edited image
+src_text: "bears mouth" # texts, describing the input image
+
+bootstrap_text: "bears mouth" # text, describing the region of interest in the input image
+bootstrap_epoch: 100 # number of epochs for bootstrapping (it is annealed during training)

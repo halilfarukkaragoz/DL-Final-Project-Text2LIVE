@@ -45,10 +45,10 @@ lr: 0.0025
 optimizer: madgrad  # [adam | radam | rmsprop | sgd]
 
 # the following is relevant only for dip_backbones backbone
-skip_n33d: 64 #128 
-skip_n33u: 64 #128
+skip_n33d: 64
+skip_n33u: 64
 skip_n11: 4
-num_scales: 4 #7
+num_scales: 6
 
 log_images_freq: 500
 center_frame_distance: 2

@@ -1,0 +1,8 @@
+image_path: "./data/images/new_2.jpeg" # path to the input image
+
+screen_text: "smoke" # texts, describing the edit layer
+comp_text: "smoking cigar" # texts, describing the full edited image
+src_text: "cigar" # texts, describing the input image
+
+bootstrap_text: "cigar" # text, describing the region of interest in the input image
+bootstrap_epoch: 100 # number of epochs for bootstrapping (it is annealed during training)

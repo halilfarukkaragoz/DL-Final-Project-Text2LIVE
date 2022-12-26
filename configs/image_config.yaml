@@ -3,7 +3,7 @@ use_wandb: False
 wandb_project: project_name  # enter your project name here
 wandb_entity: project_entity  # enter your entity here
 device: cuda
-log_images_freq: 100
+log_images_freq: 50
 # dataset configuration
 results_folder: "results"
 resize_input: 512
@@ -44,7 +44,7 @@ relevancy_num_layers: 10
 clip_affine_transform_fill: 1
 
 # training configuration
-n_epochs: 1000
+n_epochs: 1500
 scheduler_policy: exponential # [exponential| linear | step | plateau | cosine | none]
 gamma: 0.99
 min_lr: 0.00001
