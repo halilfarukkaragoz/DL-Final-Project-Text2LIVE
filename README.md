@@ -1,3 +1,5 @@
+# This repo is created for ML Reproducibility Challange 2022 
+[for more information](https://paperswithcode.com/rc2022)
 # Text2LIVE: Text-Driven Layered Image and Video Editing (ECCV 2022 - Oral)
 ## [<a href="https://text2live.github.io/" target="_blank">Project Page</a>]
 
@@ -15,45 +17,10 @@
 >We present a method for zero-shot, text-driven appearance manipulation in natural images and videos. Specifically, given an input image or video and a target text prompt, our goal is to edit the appearance of existing objects (e.g., object's texture) or augment the scene with new visual effects (e.g., smoke, fire) in a semantically meaningful manner. Our framework trains a generator using an internal dataset of training examples, extracted from a single input (image or video and target text prompt), while leveraging an external pre-trained CLIP model to establish our losses. Rather than directly generating the edited output, our key idea is to generate an edit layer (color+opacity) that is composited over the original input. This allows us to constrain the generation process and maintain high fidelity to the original input via novel text-driven losses that are applied directly to the edit layer. Our method neither relies on a pre-trained generator nor requires user-provided edit masks. Thus, it can perform localized, semantic edits on high-resolution natural images and videos across a variety of objects and scenes.
 
 
-## Getting Started
-### Installation
-
-```
-git clone https://github.com/omerbt/Text2LIVE.git
-conda create --name text2live python=3.9 
-conda activate text2live 
-pip install -r requirements.txt
-```
-
-### Download sample images and videos
-Download sample images and videos from the DAVIS dataset:
-```
-cd Text2LIVE
-gdown https://drive.google.com/uc?id=1osN4PlPkY9uk6pFqJZo8lhJUjTIpa80J&export=download
-unzip data.zip
-```
-It will create a folder `data`:
-```
-Text2LIVE
-├── ...
-├── data
-│   ├── pretrained_nla_models # NLA models are stored here
-│   ├── images # sample images
-│   └── videos # sample videos from DAVIS dataset
-│         ├── car-turn # contains video frames 
-│         ├── ...
-└── ...
-```
-To enforce temporal consistency in video edits, we utilize the Neural Layered Atlases (NLA). Pretrained NLA models are taken from <a href="https://layered-neural-atlases.github.io">here</a>, and are already inside the `data` folder.
-
-### Run examples 
-* Our method is designed to change textures of existing objects / augment the scene with semi-transparent effects (e.g., smoke, fire). It is not designed for adding new objects or significantly deviating from the original spatial layout.
+### How to Run examples 
+* Text2Live is designed to change textures of existing objects / augment the scene with semi-transparent effects (e.g., smoke, fire). It is not designed for adding new objects or significantly deviating from the original spatial layout.
 * Training **Text2LIVE** multiple times with the same inputs can lead to slightly different results.
 * CLIP sometimes exhibits bias towards specific solutions (see figure 9 in the paper), thus slightly different text prompts may lead to different flavors of edits.
-
-
-The required GPU memory depends on the input image/video size, but you should be good with a Tesla V100 32GB :).
-Currently mixed precision introduces some instability in the training process, but it could be added later.
 
 #### Video Editing
 Run the following command to start training
