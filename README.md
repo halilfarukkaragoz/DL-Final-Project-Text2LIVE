@@ -47,10 +47,10 @@ Even though our GPU limitations, the model was found to be capable of the claims
 
 We investigated the asnwers of questions such as:
 
-    * What is the model's performance on applying material edits on non-smooth surfaces like fur?
-    * Does the color/texture similarity of the image and edit affects the performance of the edits?
-    * Does semantically related edits increase the performance? Or semantically meaningless edits drop the performance?
-    * Is the model able to perform reliable edits on complex structures like the human face? Does it preserve the facial structure of the human?
+* What is the model's performance on applying material edits on non-smooth surfaces like fur?
+* Does the color/texture similarity of the image and edit affects the performance of the edits?
+* Does semantically related edits increase the performance? Or semantically meaningless edits drop the performance?
+* Is the model able to perform reliable edits on complex structures like the human face? Does it preserve the facial structure of the human?
 
 <p align="center">
   <img src="images/material.png" width="350" title="material">
