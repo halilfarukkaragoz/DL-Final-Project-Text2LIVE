@@ -33,11 +33,35 @@ Intermediate results will be saved to `results` during optimization. The frequen
 
 <p align="center">
   <img src="images/cake.png" width="350" title="Cake">
-  <img src="images/bread.png" width="350" alt="Bread">
+  <img src="images/bread.png" width="350" title="Bread">
 </p>
 
+<p align="center">
+  <img src="images/mountain.png" width="350" title="mountain">
+  <img src="images/add-effect.png" width="350" title="add-effect">
+</p>
+
+Even though our GPU limitations, the model was found to be capable of the claims of the paper. Specifically, it was able to manipulate images in a semantically related and localized manner, without the need for handcrafted masks. The objective function was also able to effectively guide the localization of the generated edit. In addition, the model was able to successfully change textures and apply semi-transparent effects, as demonstrated by the outcomes of the experiments. Overall, these results support the effectiveness of the proposed method for text-driven and zero-shot image manipulat
 
 ### Additional Experiments
+
+We investigated the asnwers of questions such as:
+
+    * What is the model's performance on applying material edits on non-smooth surfaces like fur?
+    * Does the color/texture similarity of the image and edit affects the performance of the edits?
+    * Does semantically related edits increase the performance? Or semantically meaningless edits drop the performance?
+    * Is the model able to perform reliable edits on complex structures like the human face? Does it preserve the facial structure of the human?
+
+<p align="center">
+  <img src="images/material.png" width="350" title="material">
+  <img src="images/texture.png" width="350" title="texture">
+</p>
+
+<p align="center">
+  <img src="images/emotions.png" width="350" title="emotions">
+  <img src="images/beard.png" width="350" title="beard">
+</p>
+
 
 ## Acknowledgement
 
