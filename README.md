@@ -31,6 +31,12 @@ Intermediate results will be saved to `results` during optimization. The frequen
 
 ### Reproduced Experiments
 
+<p align="center">
+  <img src="images/cake.png" width="350" title="Cake">
+  <img src="images/bread.png" width="350" alt="Bread">
+</p>
+
+
 ### Additional Experiments
 
 ## Acknowledgement
