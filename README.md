@@ -2,7 +2,7 @@
 
 This repository is a replication implementation of [Text2LIVE: Text-Driven Layered Image and Video Editing (ECCV 2022 - Oral)](https://arxiv.org/abs/2204.02491) as part of the ML [Reproducibility Challenge 2021](https://paperswithcode.com/rc2022). 
 
-<p> align="center>
+<p> align="center">
   <img src="images/black-swan.gif" width="240" height="200" />
   <img src="images/car.gif" width="240" height="200" />
   <img src="images/dog.gif" width="240" height="200" />
