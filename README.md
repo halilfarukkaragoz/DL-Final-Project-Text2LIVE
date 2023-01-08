@@ -2,12 +2,9 @@
 
 This repository is a replication implementation of [Text2LIVE: Text-Driven Layered Image and Video Editing (ECCV 2022 - Oral)](https://arxiv.org/abs/2204.02491) as part of the ML [Reproducibility Challenge 2021](https://paperswithcode.com/rc2022). 
 
-![Alt Text](images/black-swan.gif)
-
-![Alt Text](images/car.gif)
-
-![Alt Text](images/dog.gif)
-
+<img src="images/black-swan.gif" width="100" height="100" />
+<img src="images/car.gif" width="100" height="100" />
+<img src="images/car.gif" width="100" height="100" />
 
 In this repository, edited code of Text2LIVE for ML Reproducibility Challenge 2022 is presented. Some results of the experiments and adjusted hyperparameters settings are given. Furthermore, summary of the investigations and foundings can be found in this README.md file.
 
