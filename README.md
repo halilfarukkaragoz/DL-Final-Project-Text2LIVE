@@ -62,10 +62,15 @@ We investigated the asnwers of questions such as:
   <img src="images/beard.png" width="350" title="beard">
 </p>
 
+In conclusion, we have seen that model performance is not as good as in complex surfaces as it is in smooth ones. It is also seen that results are better with the semantically related edits which can be seen from the beard edits and dalmatian texture examples.In addition, when performing emotional edits performance dramatically drops. 
+
+### Comparisons with other generative methods
+
 
 ## Acknowledgement
 
 Link to Text2LIVE: [arxiv](https://arxiv.org/abs/2204.02491)
+
 For more see the [supplementary material](https://text2live.github.io/sm/index.html).
 
 
