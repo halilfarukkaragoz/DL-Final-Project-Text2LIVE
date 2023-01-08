@@ -70,9 +70,9 @@ In conclusion, we have seen that model performance is not as good as in complex 
 Results are compared with DALL-E and Stable Diffusion. For DALL-E, masks are provided by the user.
 
 <p align="center">
-  <img src="images/bird-comp.png" width="350" title="birds">
-  <img src="images/cake-comp.png" width="350" title="cake">
-  <img src="images/ball-comp.png" width="350" title="ball">
+  <img src="images/bird-comp.png" width="400" title="birds">
+  <img src="images/cake-comp.png" width="400" title="cake">
+  <img src="images/ball-comp.png" width="400" title="ball">
 </p>
 
 ## Acknowledgement
