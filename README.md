@@ -1,9 +1,6 @@
 # This repo is created for ML Reproducibility Challange 2022 
-[for more information](https://paperswithcode.com/rc2022)
-# Text2LIVE: Text-Driven Layered Image and Video Editing (ECCV 2022 - Oral)
-## [<a href="https://text2live.github.io/" target="_blank">Project Page</a>]
 
->📋  A template README.md for code accompanying a Machine Learning paper
+This repository is a replication implementation of [Text2LIVE: Text-Driven Layered Image and Video Editing (ECCV 2022 - Oral)](https://arxiv.org/abs/2204.02491) as part of the ML [Reproducibility Challenge 2021](https://paperswithcode.com/rc2022). 
 
 ## Requirements
 
