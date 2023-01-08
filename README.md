@@ -1,6 +1,10 @@
-# This repo is created for ML Reproducibility Challange 2022 
+# This repo is created for ML Reproducibility Challenge 2022 
 
 This repository is a replication implementation of [Text2LIVE: Text-Driven Layered Image and Video Editing (ECCV 2022 - Oral)](https://arxiv.org/abs/2204.02491) as part of the ML [Reproducibility Challenge 2021](https://paperswithcode.com/rc2022). 
+
+
+
+In this repository, edited code of Text2LIVE for ML Reproducibility Challenge 2022 is presented. Some results of the experiments and adjusted hyperparameters settings are given. Furthermore, summary of the investigations and foundings can be found in this README.md file.
 
 ## Requirements
 
@@ -28,6 +32,8 @@ Intermediate results will be saved to `results` during optimization. The frequen
 
 ### Reproduced Experiments
 
+Even though our GPU limitations, the model was found to be capable of the claims of the paper. Specifically, it was able to manipulate images in a semantically related and localized manner, without the need for handcrafted masks. The objective function was also able to effectively guide the localization of the generated edit. In addition, the model was able to successfully change textures and apply semi-transparent effects, as demonstrated by the outcomes of the experiments. Overall, these results support the effectiveness of the proposed method for text-driven and zero-shot image manipulation.
+
 <p align="center">
   <img src="images/cake.png" width="350" title="Cake">
   <img src="images/bread.png" width="350" title="Bread">
@@ -37,8 +43,6 @@ Intermediate results will be saved to `results` during optimization. The frequen
   <img src="images/mountain.png" width="350" title="mountain">
   <img src="images/add-effect.png" width="350" title="add-effect">
 </p>
-
-Even though our GPU limitations, the model was found to be capable of the claims of the paper. Specifically, it was able to manipulate images in a semantically related and localized manner, without the need for handcrafted masks. The objective function was also able to effectively guide the localization of the generated edit. In addition, the model was able to successfully change textures and apply semi-transparent effects, as demonstrated by the outcomes of the experiments. Overall, these results support the effectiveness of the proposed method for text-driven and zero-shot image manipulat
 
 ### Additional Experiments
 
